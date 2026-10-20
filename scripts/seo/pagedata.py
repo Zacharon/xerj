@@ -197,6 +197,8 @@ PAGES: dict[str, dict[str, str]] = {
         title="Corpus Hub v2: ask a question, get the one pack that answers",
         description="Hub v2 routes a plain question to one signed corpus, pulls only that pack (lz4: 4.4 MB) and answers locally: 1.7 to 2.3 s cold, under 60 ms warm.",
         published="2026-10-19", updated="2026-10-19",
+        og_image="og/blog-corpus-hub-v2.png",
+        og_image_alt="Cover: a wall of 245 faint pack tiles behind the 14 corpora of the signed catalogue; a question routes to the lz4 tile, whose 4.4 MB pack goes to a local node on port 9300; 1.72 to 2.27 s cold, 37 to 57 ms warm",
     ),
     "blog/index.html": dict(
         label="Blog", kind="collection",
