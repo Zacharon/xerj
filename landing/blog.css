@@ -149,6 +149,16 @@
   .verdict-panel p strong { color:var(--z-ink); }
   .verdict-panel p code.inline { color:var(--z-ink); }
 
+  /* cover art — the field-log poster series, rendered by
+     scripts/seo/blog_covers/covers.py. The poster is a self-contained dark
+     print (it doubles as the og card), so on any page colour it sits in a
+     framed, slightly rounded mount: a 1px rule in the page's own line
+     colour, no shadow. Only image rules live here;
+     page colours belong to the theme. */
+  .blog-cover { margin: 0 0 var(--sp-6); padding: 0; border: 1px solid var(--z-line);
+                border-radius: 8px; overflow: hidden; background: #0b0b0d; line-height: 0; }
+  .blog-cover img { display: block; width: 100%; height: auto; aspect-ratio: 1600 / 640; }
+
 /* ---- index components: bl-card, blp preview bars ---- */
 /* page-local — blog index: dated cards, preview visual left, brand tokens
      only, 1px lines, no icons, no shadows, no filled shapes. */
@@ -166,6 +176,10 @@
     color: inherit;
   }
   .bl-card:hover, .bl-card:focus-visible { border-color: var(--z-accent); }
+
+  /* card thumbnail: the post's cover at 640x336 (og ratio), lazy-loaded */
+  .bl-thumb { display: block; width: 100%; height: auto; aspect-ratio: 640 / 336; align-self: start;
+              border: 1px solid var(--z-line); border-radius: 6px; background: #0b0b0d; }
 
   /* preview slot — a theme-native miniature scorecard, pure divs; no image
      file, correct in day and night by construction (site precedent: every
