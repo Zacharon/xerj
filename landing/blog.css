@@ -234,3 +234,27 @@
     .bl-card { grid-template-columns: minmax(0, 1fr); gap: var(--sp-4); }
     .bl-title { font-size: var(--fs-20); }
   }
+
+/* ---- reading typography: post body (2026-10-19) ----
+   Size, line-height, measure and spacing only. Colours stay with the theme
+   tokens in style.css; image rules (covers, thumbnails) live above. */
+  .uc-hero .uc-eyebrow { font-size: 13px; }
+  .blog-crumb, .blog-byline { font-size: 13px; }
+  .uc-hero .lede { font-size: 20px; line-height: 1.6; max-width: 70ch; margin: var(--sp-8) 0 0; }
+
+  section.scene-section > .kicker { font-size: 13px; margin-bottom: var(--sp-4); }
+  section.scene-section > h2.scene { margin: 0 0 var(--sp-8); }
+  section.scene-section > p,
+  section.scene-section > ul > li { font-size: 18px; line-height: 1.65; }
+  section.scene-section > p { max-width: 70ch; margin: 0 0 1.1em; }
+  section.scene-section > p:last-child { margin-bottom: 0; }
+  section.scene-section > ul { max-width: 70ch; margin: 0 0 1.1em; padding-left: 1.25em; }
+  section.scene-section > ul > li { margin: 0 0 .6em; }
+  section.scene-section > pre.code { font-size: 14.5px; line-height: 1.6;
+                                     margin: var(--sp-6) 0 var(--sp-8); padding: 20px 22px; }
+  section.scene-section > .vt-wrap { margin: var(--sp-6) 0 var(--sp-8); }
+  section.scene-section > .stat-band { margin: var(--sp-6) 0 var(--sp-8); }
+  table.vt { font-size: 15px; line-height: 1.5; }
+  .vt th { font-size: 12.5px; }
+  .stat .k { font-size: 12.5px; }
+  .stat .s { font-size: 15px; }
