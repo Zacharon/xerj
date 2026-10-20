@@ -441,8 +441,9 @@ def m_route(w: float, h: float, rng: random.Random) -> str:
     # front: the 14 catalogue tiles
     tc = 7
     tw = (w - 6 * 10) / tc
-    th = tw * 0.62
     ty0 = wall_h + 22
+    # two tile rows, then the node and the caption must fit under them
+    th = min(tw * 0.62, (h - 40 - ty0 - 34) / 2 - 30)
     lz = None
     for k, slug in enumerate(slugs):
         i, j = k % tc, k // tc
