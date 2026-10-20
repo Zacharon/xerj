@@ -184,11 +184,25 @@ PAGES: dict[str, dict[str, str]] = {
         description="We ran the exploit corpus against three CVEs it had never seen: one query named the exact route and field for one, an in-corpus 2026 exploit named the exact denylist segments the vendor shipped for another, and the third proved the corpus adds nothing when its stratum is empty. Losses included.",
         published="2026-10-08", updated="2026-10-08",
     ),
+    # Corpus Hub v2 post, 2026-10-19. Every figure was measured or read live
+    # that day: timings from four cold + eleven warm runs of xerj v1.0.0-rc.97
+    # in an isolated HOME (lz4 pack 4,623,814 B, pack-lz4-0774d055); exit codes
+    # from engine/crates/xerj-hub/src/ask.rs and PR #1905; counts from the
+    # hub.xerj.org header (513 live), GitHub Releases (245 distinct slugs with
+    # a published *.hubpack.tar.zst) and the signed catalogue (14 entries,
+    # generated 2026-10-18T02:13Z); feedback/traffic JSON from /api/corpus-
+    # feedback and /api/hub-traffic for act; field-report loop #1838 -> #1848.
+    "blog/corpus-hub-v2.html": dict(
+        label="Corpus Hub v2", kind="article",
+        title="Corpus Hub v2: ask a question, get the one pack that answers",
+        description="Hub v2 routes a plain question to one signed corpus, pulls only that pack (lz4: 4.4 MB) and answers locally: 1.7 to 2.3 s cold, under 60 ms warm.",
+        published="2026-10-19", updated="2026-10-19",
+    ),
     "blog/index.html": dict(
         label="Blog", kind="collection",
         title="XERJ.ai — Blog: the engineering log",
-        description="Measured results with the losses left in: the exploit hub tested on three fresh CVEs, guest eval scars from a production agent-memory system, the Corpus Hub launch, the rc.80 gates post, the Jev decisions study, the JEV rerank verdict, the storage formats that cut the index 28%, and the signed rust-vulns corpus pack.",
-        updated="2026-10-08",
+        description="Measured results with the losses left in: Corpus Hub v2 and xerj ask, the exploit hub tested on three fresh CVEs, guest eval scars from a production agent-memory system, the Corpus Hub launch, the rc.80 gates post, the Jev decisions study, the JEV rerank verdict, the storage formats that cut the index 28%, and the signed rust-vulns corpus pack.",
+        updated="2026-10-19",
     ),
     "demo/index.html": dict(
         label="Real-data demo", kind="software",
